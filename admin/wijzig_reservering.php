@@ -511,47 +511,7 @@ function wijzig_reservering() {
                 }
             }
         }
-        
-//        function wijzig_tot(){
-//            /* CHECK VAN INGEVULDE VAN/TOT WERKT WEL, CHECKEN MET DE DATABASE WERKT NIET, ALLEEN INVOEREN WERKT OOK NIET. */
-//            global $pdo;
-//            if (!empty($_POST["tot"])) {
-//                
-//                if (strlen($_POST["tot"]) == 10) {
-//                
-//                    if (!empty($_POST["van"])) {
-//                        if ($_POST["tot"] <= $_POST["van"]) {
-//                           $_SESSION['message'] = "<div class=\"alert alert-danger\" id=\"success-alert\">
-//                                        <button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>
-//                                        <strong>Mislukt!</strong> &nbsp; De an datum ligt na de tot datum.
-//                                        </div>";
-//                            return FALSE; 
-//                            }
-//                        } elseif (empty($_POST["van"])) {
-//
-//                            if ($_POST["tot"] <= getDateVan()) {
-//                            $_SESSION['message'] = "<div class=\"alert alert-danger\" id=\"success-alert\">
-//                                        <button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>
-//                                        <strong>Mislukt!</strong> &nbsp; De van datum ligt na de tot datum.
-//                                        </div>";
-//                            return FALSE;   
-//                            } else {
-//                                $datumtot = $_POST["tot"];
-//                                $totdatum = date("Y-m-d", strtotime($datumtot));
-//                                $stmt = $pdo->prepare("UPDATE reservering SET tot = ? WHERE reserveringnr = ?;");
-//                                $stmt->execute(array ($totdatum, $_GET["reserveringnr"]));
-//                                }    
-//                    }
-//                } else {
-//                    $_SESSION['message'] = "<div class=\"alert alert-danger\" id=\"success-alert\">
-//                                        <button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>
-//                                        <strong>Mislukt!</strong> &nbsp; De format van de datum klopt niet.
-//                                        </div>";
-//                            return FALSE; 
-//                }
-//            }
-//        }
-    
+                                                       
         function wijzig_aantal_pistolen(){
             global $pdo;
             if (!empty($_POST["aantal_pistolen"])) {
